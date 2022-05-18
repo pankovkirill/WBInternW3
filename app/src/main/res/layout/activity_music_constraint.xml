@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/music_back"
+    android:paddingBottom="16dp"
+    tools:context=".MusicConstraintActivity">
+    <!--    DBDBDB-->
+
+    <View
+        android:id="@+id/viewPlay"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/play_music_back"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineQuarter"
+        app:layout_constraintEnd_toEndOf="@id/guidelineCenterVertical"
+        app:layout_constraintStart_toStartOf="@id/guidelineCenterVertical"
+        app:layout_constraintTop_toTopOf="@id/guidelineQuarter" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_baseline_play_arrow_24"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineQuarter"
+        app:layout_constraintEnd_toEndOf="@id/guidelineCenterVertical"
+        app:layout_constraintStart_toStartOf="@id/guidelineCenterVertical"
+        app:layout_constraintTop_toTopOf="@id/guidelineQuarter" />
+
+    <ImageView
+        android:id="@+id/arrowLeft"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:src="@drawable/ic_baseline_arrow_left_24"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineQuarter"
+        app:layout_constraintEnd_toEndOf="@id/viewPlay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guidelineQuarter" />
+
+    <ImageView
+        android:id="@+id/arrowRight"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:src="@drawable/ic_baseline_arrow_right_24"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineQuarter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/viewPlay"
+        app:layout_constraintTop_toTopOf="@id/guidelineQuarter" />
+
+    <ImageView
+        android:id="@+id/imageDisLike"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="50dp"
+        android:src="@drawable/ic_baseline_favorite_border_24"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineQuarter"
+        app:layout_constraintEnd_toEndOf="@id/arrowLeft"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guidelineQuarter" />
+
+    <ImageView
+        android:id="@+id/imageLike"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="50dp"
+        android:src="@drawable/ic_baseline_favorite_24"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineQuarter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/arrowRight"
+        app:layout_constraintTop_toTopOf="@id/guidelineQuarter" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCenterHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCenterVertical"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineQuarter"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:theme="@style/SeekBarColor"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineCenterHorizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guidelineCenterHorizontal" />
+
+    <TextView
+        android:id="@+id/textTimeStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        android:text="0:00"
+        android:textColor="#DBDBDB"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seekBar" />
+
+    <TextView
+        android:id="@+id/textTimeEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="28dp"
+        android:text="5:20"
+        android:textColor="#DBDBDB"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seekBar" />
+
+    <TextView
+        android:id="@+id/textViewAuthor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="10dp"
+        android:text="R. Armando Morabito"
+        android:textColor="#DBDBDB"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@id/seekBar"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="5dp"
+        android:ellipsize="marquee"
+        android:fadingEdge="horizontal"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="Angel (feat. Julie Elven) Angel (feat. Julie Elven)"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toTopOf="@id/textViewAuthor"
+        app:layout_constraintEnd_toStartOf="@+id/imageShare"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageMore"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_baseline_drag_indicator_24"
+        app:layout_constraintBottom_toBottomOf="@id/textViewAuthor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textViewName" />
+
+    <ImageView
+        android:id="@+id/imageShare"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_baseline_reply_24"
+        app:layout_constraintBottom_toBottomOf="@id/textViewAuthor"
+        app:layout_constraintEnd_toStartOf="@id/imageMore"
+        app:layout_constraintTop_toTopOf="@id/textViewName" />
+
+    <ImageView
+        android:id="@+id/arrowDown"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/menu"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_baseline_menu_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/computer"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_baseline_computer_24"
+        app:layout_constraintEnd_toStartOf="@+id/menu"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nowPlaying"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Сейчас играет"
+        android:textColor="#DBDBDB"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textAlbum"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:fadingEdge="horizontal"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="Название альбома Название альбома"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nowPlaying" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/textViewName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textAlbum"
+        tools:listitem="@layout/recycler_item" />
+
+    <ImageView
+        android:id="@+id/replay"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/replay"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/highQuality"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/highQuality"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/high_quality"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/alarm"
+        app:layout_constraintStart_toEndOf="@+id/replay" />
+
+    <ImageView
+        android:id="@+id/alarm"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/ic_baseline_access_alarm_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/shuffle"
+        app:layout_constraintStart_toEndOf="@+id/highQuality" />
+
+    <ImageView
+        android:id="@+id/shuffle"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/shuffle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/alarm" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

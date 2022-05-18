@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewHeaderConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Constraint Layout"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnConstraintTelegram"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Telegram constraint"
+        app:layout_constraintTop_toBottomOf="@id/textViewHeaderConstraint" />
+
+    <Button
+        android:id="@+id/btnConstraintMusic"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Music constraint"
+        app:layout_constraintTop_toBottomOf="@id/btnConstraintTelegram" />
+
+    <Button
+        android:id="@+id/btnConstraintCalculator"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculator constraint"
+        app:layout_constraintTop_toBottomOf="@id/btnConstraintMusic" />
+
+    <Button
+        android:id="@+id/btnConstraintFacebook"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Facebook constraint"
+        app:layout_constraintTop_toBottomOf="@id/btnConstraintCalculator" />
+
+    <TextView
+        android:id="@+id/textViewHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Without Constraint Layout"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/btnConstraintFacebook" />
+
+    <Button
+        android:id="@+id/btnTelegram"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Telegram"
+        app:layout_constraintTop_toBottomOf="@id/textViewHeader" />
+
+    <Button
+        android:id="@+id/btnMusic"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Music"
+        app:layout_constraintTop_toBottomOf="@id/btnTelegram" />
+
+    <Button
+        android:id="@+id/btnCalculator"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculator"
+        app:layout_constraintTop_toBottomOf="@id/btnMusic" />
+
+    <Button
+        android:id="@+id/btnFacebook"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Facebook"
+        app:layout_constraintTop_toBottomOf="@id/btnCalculator" />
+</androidx.constraintlayout.widget.ConstraintLayout>

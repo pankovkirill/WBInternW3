@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TelegramConstraintActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#5B8FBB"
+        app:layout_constraintBottom_toTopOf="@id/guidelineTop"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTop"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:outlineAmbientShadowColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="@color/white"
+        app:borderWidth="0dp"
+        android:src="@drawable/ic_baseline_add_a_photo_24"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineTop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guidelineTop" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/image"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="20dp"
+        android:fitsSystemWindows="true"
+        app:cardCornerRadius="100dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineTop"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/avatar"
+            tools:ignore="ContentDescription" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:text="Name"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/textViewOnline"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintTop_toTopOf="@id/image" />
+
+    <TextView
+        android:id="@+id/textViewOnline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:text="online"
+        android:textSize="10dp"
+        app:layout_constraintStart_toStartOf="@id/textViewName"
+        app:layout_constraintTop_toBottomOf="@id/textViewName" />
+
+    <ImageView
+        android:paddingTop="16dp"
+        android:paddingStart="16dp"
+        android:id="@+id/arrowBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp"
+        android:id="@+id/menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_drag_indicator_24_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp"
+        android:id="@+id/search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_search_24"
+        app:layout_constraintEnd_toStartOf="@id/menu"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp"
+        android:id="@+id/qrCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_qr_code_24"
+        app:layout_constraintEnd_toStartOf="@id/search"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guidelineTop">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/accountInfo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:paddingBottom="10dp"
+                android:text="@string/account"
+                android:textColor="@color/telegram_parts_text_color"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineMarginEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineMarginStart"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/phoneNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="@string/phone_number"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineMarginEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineMarginStart"
+                app:layout_constraintTop_toBottomOf="@id/accountInfo" />
+
+            <TextView
+                android:id="@+id/phoneNumberInfoChange"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:text="@string/tap_to_change_phone_number"
+                android:textSize="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineMarginEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineMarginStart"
+                app:layout_constraintTop_toBottomOf="@id/phoneNumber" />
+
+            <View
+                android:id="@+id/accountInfoView"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/telegram_view_between_parts_color"
+                android:paddingBottom="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guidelineMarginStart"
+                app:layout_constraintTop_toBottomOf="@id/phoneNumberInfoChange" />
+
+            <TextView
+                android:id="@+id/textViewUserName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/login"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineMarginEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineMarginStart"
+                app:layout_constraintTop_toBottomOf="@id/accountInfoView" />
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:text="@string/username"
+                android:textSize="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineMarginEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineMarginStart"
+                app:layout_constraintTop_toBottomOf="@id/textViewUserName" />
+
+            <View
+                android:id="@+id/userNameInfo"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/telegram_view_between_parts_color"
+                android:paddingBottom="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guidelineMarginStart"
+                app:layout_constraintTop_toBottomOf="@id/userName" />
+
+            <TextView
+                android:id="@+id/textViewBio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/some_text"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineMarginEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineMarginStart"
+                app:layout_constraintTop_toBottomOf="@id/userNameInfo" />
+
+            <TextView
+                android:id="@+id/bio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:text="@string/bio"
+                android:textSize="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineMarginEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineMarginStart"
+                app:layout_constraintTop_toBottomOf="@id/textViewBio" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineMarginStart"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="16dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineMarginEnd"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="16dp" />
+
+            <View
+                android:id="@+id/viewBetweenInfo"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/telegram_view_between_parts_color"
+                app:layout_constraintTop_toBottomOf="@+id/bio" />
+
+            <TextView
+                android:id="@+id/accountSetting"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:paddingBottom="10dp"
+                android:text="@string/setting"
+                android:textColor="@color/telegram_parts_text_color"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineMarginEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineMarginStart"
+                app:layout_constraintTop_toBottomOf="@id/viewBetweenInfo" />
+
+
+            <ImageView
+                android:id="@+id/notificationIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:paddingEnd="20dp"
+                android:src="@drawable/ic_baseline_notifications_none_24"
+                app:layout_constraintBottom_toTopOf="@id/privacyIcon"
+                app:layout_constraintEnd_toStartOf="@id/textViewNotification"
+                app:layout_constraintStart_toStartOf="@id/guidelineMarginStart"
+                app:layout_constraintTop_toBottomOf="@id/accountSetting" />
+
+            <TextView
+                android:id="@+id/textViewNotification"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/notification_and_sounds"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@id/notificationIcon"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineMarginEnd"
+                app:layout_constraintStart_toEndOf="@+id/notificationIcon"
+                app:layout_constraintTop_toTopOf="@id/notificationIcon" />
+
+            <ImageView
+                android:id="@+id/privacyIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:paddingEnd="20dp"
+                android:src="@drawable/ic_baseline_lock_24"
+                app:layout_constraintBottom_toTopOf="@id/dataIcon"
+                app:layout_constraintEnd_toStartOf="@id/textViewPrivacy"
+                app:layout_constraintStart_toStartOf="@id/guidelineMarginStart"
+                app:layout_constraintTop_toBottomOf="@id/notificationIcon" />
+
+            <TextView
+                android:id="@+id/textViewPrivacy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/privacy_and_security"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@id/privacyIcon"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineMarginEnd"
+                app:layout_constraintStart_toEndOf="@+id/privacyIcon"
+                app:layout_constraintTop_toTopOf="@id/privacyIcon" />
+
+            <View
+                android:id="@+id/firstPartSettingView"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/telegram_view_between_parts_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/textViewPrivacy"
+                app:layout_constraintTop_toBottomOf="@id/textViewPrivacy" />
+
+            <ImageView
+                android:id="@+id/dataIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:paddingEnd="20dp"
+                android:src="@drawable/ic_baseline_data_usage_24"
+                app:layout_constraintBottom_toTopOf="@id/chatsIcon"
+                app:layout_constraintEnd_toStartOf="@id/textViewData"
+                app:layout_constraintStart_toStartOf="@id/guidelineMarginStart"
+                app:layout_constraintTop_toBottomOf="@id/privacyIcon" />
+
+            <TextView
+                android:id="@+id/textViewData"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/data_and_storage"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@id/dataIcon"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineMarginEnd"
+                app:layout_constraintStart_toEndOf="@+id/dataIcon"
+                app:layout_constraintTop_toTopOf="@id/dataIcon" />
+
+            <ImageView
+                android:id="@+id/chatsIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:paddingEnd="20dp"
+                android:src="@drawable/ic_baseline_lock_24"
+                app:layout_constraintBottom_toTopOf="@id/foldersIcon"
+                app:layout_constraintEnd_toStartOf="@id/textViewChat"
+                app:layout_constraintStart_toStartOf="@id/guidelineMarginStart"
+                app:layout_constraintTop_toBottomOf="@id/dataIcon" />
+
+            <TextView
+                android:id="@+id/textViewChat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/chat_setting"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@id/chatsIcon"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineMarginEnd"
+                app:layout_constraintStart_toEndOf="@+id/chatsIcon"
+                app:layout_constraintTop_toTopOf="@id/chatsIcon" />
+
+            <View
+                android:id="@+id/secondPartSettingView"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/telegram_view_between_parts_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/textViewChat"
+                app:layout_constraintTop_toBottomOf="@id/textViewChat" />
+
+            <ImageView
+                android:id="@+id/foldersIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:paddingEnd="20dp"
+                android:src="@drawable/ic_baseline_folder_open_24"
+                app:layout_constraintBottom_toTopOf="@id/devicesIcon"
+                app:layout_constraintEnd_toStartOf="@id/textViewFolders"
+                app:layout_constraintStart_toStartOf="@id/guidelineMarginStart"
+                app:layout_constraintTop_toBottomOf="@id/chatsIcon" />
+
+            <TextView
+                android:id="@+id/textViewFolders"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/chat_folders"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@id/foldersIcon"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineMarginEnd"
+                app:layout_constraintStart_toEndOf="@+id/foldersIcon"
+                app:layout_constraintTop_toTopOf="@id/foldersIcon" />
+
+            <ImageView
+                android:id="@+id/devicesIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:paddingEnd="20dp"
+                android:src="@drawable/ic_baseline_devices_24"
+                app:layout_constraintBottom_toTopOf="@id/iconLanguage"
+                app:layout_constraintEnd_toStartOf="@id/textViewChat"
+                app:layout_constraintStart_toStartOf="@id/guidelineMarginStart"
+                app:layout_constraintTop_toBottomOf="@id/foldersIcon" />
+
+            <TextView
+                android:id="@+id/textViewDevices"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/devices"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@id/devicesIcon"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineMarginEnd"
+                app:layout_constraintStart_toEndOf="@+id/devicesIcon"
+                app:layout_constraintTop_toTopOf="@id/devicesIcon" />
+
+            <View
+                android:id="@+id/thirdPartSettingView"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/telegram_view_between_parts_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/textViewDevices"
+                app:layout_constraintTop_toBottomOf="@id/textViewDevices" />
+
+            <ImageView
+                android:id="@+id/iconLanguage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="20dp"
+                android:src="@drawable/ic_baseline_language_24"
+                app:layout_constraintBottom_toTopOf="@id/viewBetweenSetting"
+                app:layout_constraintEnd_toStartOf="@id/textViewChat"
+                app:layout_constraintStart_toStartOf="@id/guidelineMarginStart"
+                app:layout_constraintTop_toBottomOf="@id/devicesIcon" />
+
+            <TextView
+                android:id="@+id/textViewLanguage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/language"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@id/iconLanguage"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineMarginEnd"
+                app:layout_constraintStart_toEndOf="@+id/iconLanguage"
+                app:layout_constraintTop_toTopOf="@id/iconLanguage" />
+
+            <View
+                android:id="@+id/viewBetweenSetting"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/telegram_view_between_parts_color"
+                app:layout_constraintTop_toBottomOf="@id/iconLanguage" />
+
+            <TextView
+                android:id="@+id/accountHelp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:paddingBottom="10dp"
+                android:text="@string/help"
+                android:textColor="@color/telegram_parts_text_color"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineMarginEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineMarginStart"
+                app:layout_constraintTop_toBottomOf="@id/viewBetweenSetting" />
+
+            <ImageView
+                android:id="@+id/iconQuestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:paddingEnd="20dp"
+                android:src="@drawable/ic_baseline_chat_24"
+                app:layout_constraintBottom_toTopOf="@id/iconFAQ"
+                app:layout_constraintEnd_toStartOf="@id/textViewQuestion"
+                app:layout_constraintStart_toStartOf="@id/guidelineMarginStart"
+                app:layout_constraintTop_toBottomOf="@id/accountHelp" />
+
+            <TextView
+                android:id="@+id/textViewQuestion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/ask_a_question"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@id/iconQuestion"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineMarginEnd"
+                app:layout_constraintStart_toEndOf="@+id/iconQuestion"
+                app:layout_constraintTop_toTopOf="@id/iconQuestion" />
+
+            <ImageView
+                android:id="@+id/iconFAQ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:paddingEnd="20dp"
+                android:src="@drawable/ic_baseline_question_mark_24"
+                app:layout_constraintBottom_toTopOf="@id/iconPolicy"
+                app:layout_constraintEnd_toStartOf="@id/textViewFAQ"
+                app:layout_constraintStart_toStartOf="@id/guidelineMarginStart"
+                app:layout_constraintTop_toBottomOf="@id/iconQuestion" />
+
+            <TextView
+                android:id="@+id/textViewFAQ"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/telegram_faq"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@id/iconFAQ"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineMarginEnd"
+                app:layout_constraintStart_toEndOf="@+id/iconFAQ"
+                app:layout_constraintTop_toTopOf="@id/iconFAQ" />
+
+            <ImageView
+                android:id="@+id/iconPolicy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="20dp"
+                android:src="@drawable/ic_baseline_beenhere_24"
+                app:layout_constraintBottom_toTopOf="@id/versionInfo"
+                app:layout_constraintEnd_toStartOf="@id/textViewPolicy"
+                app:layout_constraintStart_toStartOf="@id/guidelineMarginStart"
+                app:layout_constraintTop_toBottomOf="@id/iconFAQ" />
+
+            <TextView
+                android:id="@+id/textViewPolicy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/privacy_policy"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@id/iconPolicy"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineMarginEnd"
+                app:layout_constraintStart_toEndOf="@+id/iconPolicy"
+                app:layout_constraintTop_toTopOf="@id/iconPolicy" />
+
+            <TextView
+                android:id="@+id/versionInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/telegram_view_between_parts_color"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/telegram_for_android"
+                app:layout_constraintTop_toBottomOf="@id/iconPolicy" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

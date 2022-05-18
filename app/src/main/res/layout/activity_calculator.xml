@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CalculatorActivity">
+
+
+    <TextView
+        android:paddingTop="16dp"
+        android:id="@+id/textViewWorkSpace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:gravity="end|center"
+        android:text="789+56"
+        android:textColor="@color/black"
+        android:textSize="50dp" />
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:gravity="end"
+        android:text="845"
+        android:textColor="@color/gray_700"
+        android:textSize="25dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/ic_baseline_access_time_24" />
+
+        <ImageView
+            android:id="@+id/imageService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/ic_baseline_design_services_24" />
+
+        <ImageView
+            android:id="@+id/imageRule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/ic_baseline_rule_24" />
+
+        <TextView
+            android:id="@+id/imageClear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="16dp"
+            android:drawableEnd="@drawable/ic_baseline_backspace_24" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="16dp"
+        android:background="@color/gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btn_clear"
+                style="@style/styleForActionButtonLinear"
+                android:background="@drawable/calculator_digit_btn_back"
+                android:text="C"
+                android:textColor="#F44336" />
+
+            <TextView
+                android:id="@+id/btn_staples"
+                style="@style/styleForActionButtonLinear"
+                android:background="@drawable/calculator_digit_btn_back"
+                android:text="( )" />
+
+            <TextView
+                android:id="@+id/btn_percent"
+                style="@style/styleForActionButtonLinear"
+                android:background="@drawable/calculator_digit_btn_back"
+                android:text="%" />
+
+            <TextView
+                android:id="@+id/btn_division"
+                style="@style/styleForActionButtonLinear"
+                android:background="@drawable/calculator_digit_btn_back"
+                android:text="÷" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btn_7"
+                style="@style/styleForDigitButtonLinear"
+                android:background="@drawable/calculator_digit_btn_back"
+                android:text="7" />
+
+            <TextView
+                android:id="@+id/btn_8"
+                style="@style/styleForDigitButtonLinear"
+                android:background="@drawable/calculator_digit_btn_back"
+                android:text="8" />
+
+            <TextView
+                android:id="@+id/btn_9"
+                style="@style/styleForDigitButtonLinear"
+                android:background="@drawable/calculator_digit_btn_back"
+                android:text="9" />
+
+            <TextView
+                android:id="@+id/btn_multiply"
+                style="@style/styleForActionButtonLinear"
+                android:background="@drawable/calculator_digit_btn_back"
+                android:text="×" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btn_4"
+                style="@style/styleForDigitButtonLinear"
+                android:background="@drawable/calculator_digit_btn_back"
+                android:text="4" />
+
+            <TextView
+                android:id="@+id/btn_5"
+                style="@style/styleForDigitButtonLinear"
+                android:background="@drawable/calculator_digit_btn_back"
+                android:text="5" />
+
+            <TextView
+                android:id="@+id/btn_6"
+                style="@style/styleForDigitButtonLinear"
+                android:background="@drawable/calculator_digit_btn_back"
+                android:text="6" />
+
+            <TextView
+                android:id="@+id/btn_minus"
+                style="@style/styleForActionButtonLinear"
+                android:background="@drawable/calculator_digit_btn_back"
+                android:text="-" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btn_1"
+                style="@style/styleForDigitButtonLinear"
+                android:background="@drawable/calculator_digit_btn_back"
+                android:text="1" />
+
+            <TextView
+                android:id="@+id/btn_2"
+                style="@style/styleForDigitButtonLinear"
+                android:background="@drawable/calculator_digit_btn_back"
+                android:text="2" />
+
+            <TextView
+                android:id="@+id/btn_3"
+                style="@style/styleForDigitButtonLinear"
+                android:background="@drawable/calculator_digit_btn_back"
+                android:text="3" />
+
+            <TextView
+                android:id="@+id/btn_plus"
+                style="@style/styleForActionButtonLinear"
+                android:background="@drawable/calculator_digit_btn_back"
+                android:text="+" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btn_replacement"
+                style="@style/styleForDigitButtonLinear"
+                android:background="@drawable/calculator_digit_btn_back"
+                android:text="+/-" />
+
+            <TextView
+                android:id="@+id/btn_0"
+                style="@style/styleForDigitButtonLinear"
+                android:background="@drawable/calculator_digit_btn_back"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/btn_comma"
+                style="@style/styleForDigitButtonLinear"
+                android:background="@drawable/calculator_digit_btn_back"
+                android:text="," />
+
+            <TextView
+                android:id="@+id/btn_equally"
+                style="@style/styleForDigitButtonLinear"
+                android:background="@drawable/calculator_equal_btn_back"
+                android:text="="
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

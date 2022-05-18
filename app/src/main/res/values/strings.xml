@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">WBInternW3</string>
+    <string name="login_hint">Телефон или электронный адрес</string>
+    <string name="password_hint">Пароль</string>
+    <string name="new_password">Забыли\nпароль?</string>
+    <string name="sin_in">Войти</string>
+    <string name="login">\@asfdsg</string>
+    <string name="account">Account</string>
+    <string name="phone_number">+7 (999) 850-90-07</string>
+    <string name="tap_to_change_phone_number">Tap to change phone number</string>
+    <string name="username">Username</string>
+    <string name="some_text">Что-то там</string>
+    <string name="bio">Bio</string>
+    <string name="setting">Setting</string>
+    <string name="notification_and_sounds">Notification and Sounds</string>
+    <string name="privacy_and_security">Privacy and Security</string>
+    <string name="data_and_storage">Data and Storage</string>
+    <string name="chat_setting">Chat Setting</string>
+    <string name="chat_folders">Chat Folders</string>
+    <string name="devices">Devices</string>
+    <string name="help">Help</string>
+    <string name="ask_a_question">Ask a Question</string>
+    <string name="telegram_faq">Telegram FAQ</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="telegram_for_android">Telegram for Android</string>
+    <string name="language">Language</string>
+</resources>
